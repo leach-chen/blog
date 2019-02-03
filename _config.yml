@@ -81,27 +81,27 @@ label2:  </span>
 
 links1:
   - name:         所有
-    url:          /
+    url:          /blog
     type:         recent
     external:     false
   - name:         随笔
-    url:          /blog/essays
+    url:          /myblog/essays
     type:         essays
     external:     false
   - name:         Jekyll
-    url:          /blog/jekyll
+    url:          /myblog/jekyll
     type:         jekyll
     external:     false
   - name:         Android
-    url:          /blog/android
+    url:          /myblog/android
     type:         androidoriginal
     external:     false
   - name:         逆向笔记
-    url:          /blog/hacker
+    url:          /myblog/hacker
     type:         hacker
     external:     false
   - name:         Flutter
-    url:          /blog/flutter
+    url:          /myblog/flutter
     type:         flutter
     external:     false
   - name:         FFmpeg
@@ -109,23 +109,23 @@ links1:
     type:         ffmpeg
     external:     false
   - name:         OpenGL
-    url:          /blog/opengl
+    url:          /myblog/opengl
     type:         opengl
     external:     false
   - name:         Python
-    url:          /blog/python
+    url:          /myblog/python
     type:         python
     external:     false
   - name:         测试相关
-    url:          /blog/abouttest
+    url:          /myblog/abouttest
     type:         abouttest
     external:     false
   - name:         股票
-    url:          /blog/stock
+    url:          /myblog/stock
     type:         stock
     external:     false
   - name:         其它
-    url:          /blog/other
+    url:          /myblog/other
     type:         other
     external:     false
 blog_1:    recent
