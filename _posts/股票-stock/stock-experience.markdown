@@ -9,7 +9,7 @@ author: # Add name author (optional)
 stock: true
 ---
 
-{{site.label1}} <a href="https://github.com/leach-chen/leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 https://baike.baidu.com/item/%E5%9D%87%E7%BA%BF%E5%BC%BA%E5%8A%9B%E6%94%AF%E6%92%91/8283190?fr=aladdin
 

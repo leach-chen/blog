@@ -9,7 +9,7 @@ author: # Add name author (optional)
 androidoriginal: true
 ---
 
-{{site.label1}} <a href="https://github.com/leach-chen/leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 本节主要介绍下JNI的**函数命名及参数说明，数据类型对应关系，描述符及对JNI的理解**。
 

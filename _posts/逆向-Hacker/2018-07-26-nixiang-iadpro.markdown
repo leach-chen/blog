@@ -9,7 +9,7 @@ author: # Add name author (optional)
 hacker: true
 ---
 
-{{site.label1}} <a href="https://github.com/leach-chen/leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 主要记录IDA Pro的一些用法，持续更新...
 
