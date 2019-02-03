@@ -31,4 +31,4 @@ other: true
 **17，** 前方路口左转(要在交通指示灯左边行驶) <br>
 **18，** 靠边停车(报完指令150米以内完成，并且停示时前后轮不能大于50厘米) <br>
 
-<img src="/assets/img/blog/other/jiaolian/1.jpg"/>
+"<img src="{{site.imagepath}}/assets/img/blog/other/jiaolian/1.jpg"/>

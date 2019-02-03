@@ -10,7 +10,7 @@ androidoriginal: true
 ---
 本章将讲解下如何自定义一个带箭头指向的TextView,很简单，先看下效果
 
-<img src="/assets/img/blog/androidoriginal/arrowtextview/preview.jpg" height = "300px"/>
+"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/arrowtextview/preview.jpg" height = "300px"/>
 
 那么如何实现呢？
 

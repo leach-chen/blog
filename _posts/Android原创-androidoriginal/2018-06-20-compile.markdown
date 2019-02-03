@@ -27,9 +27,9 @@ repositories {
 
 1. 打开站长工具网站，<a href="http://ping.chinaz.com/dl.google.com" style="text-decoration: none;" target="\_blank"  title="点击前往">http://ping.chinaz.com/dl.google.com</a><br>
 1. 找到 ping测试，输入dl.google.com，执行ping测试
-<img src="/assets/img/blog/androidoriginal/compile/1.jpg" height = "200px"/><br>
+"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/compile/1.jpg" height = "200px"/><br>
 1. 网页往下翻，随便拿到个ip地址，如203.208.41.70
-<img src="/assets/img/blog/androidoriginal/compile/2.jpg" height = "200px"/><br>
+"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/compile/2.jpg" height = "200px"/><br>
 1. 修改host文件，windows进入C:\Windows\System32\drivers\etc，打开host文件，在文件最末尾加入203.208.41.70 dl.google.com<br>
 
 此时进入项目重新同步下，库就可以正常加载下来了

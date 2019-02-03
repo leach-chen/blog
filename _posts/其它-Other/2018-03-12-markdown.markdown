@@ -40,7 +40,7 @@ other: true
 ### **4. 图片** ###
 ```
 ![](/assets/img/leach-face.jpg)        相当于
-<img src="/assets/img/leach-face.jpg" height="100%"/>
+"<img src="{{site.imagepath}}/assets/img/leach-face.jpg" height="100%"/>
 ```
 ![](/assets/img/leach-face.jpg)
 
