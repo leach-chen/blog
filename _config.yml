@@ -61,7 +61,6 @@ plugins:
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
 
-
 links:
   - name:         Home
     url:          /
