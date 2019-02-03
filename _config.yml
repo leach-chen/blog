@@ -84,47 +84,47 @@ links1:
     type:         recent
     external:     false
   - name:         随笔
-    url:          /myblog/essays
+    url:          /blog/myblog/essays
     type:         essays
     external:     false
   - name:         Jekyll
-    url:          /myblog/jekyll
+    url:          /blog/myblog/jekyll
     type:         jekyll
     external:     false
   - name:         Android
-    url:          /myblog/android
+    url:          /blog/myblog/android
     type:         androidoriginal
     external:     false
   - name:         逆向笔记
-    url:          /myblog/hacker
+    url:          /blog/myblog/hacker
     type:         hacker
     external:     false
   - name:         Flutter
-    url:          /myblog/flutter
+    url:          /blog/myblog/flutter
     type:         flutter
     external:     false
   - name:         FFmpeg
-    url:          /blog/ffmpeg
+    url:          /blog/blog/ffmpeg
     type:         ffmpeg
     external:     false
   - name:         OpenGL
-    url:          /myblog/opengl
+    url:          /blog/myblog/opengl
     type:         opengl
     external:     false
   - name:         Python
-    url:          /myblog/python
+    url:          /blog/myblog/python
     type:         python
     external:     false
   - name:         测试相关
-    url:          /myblog/abouttest
+    url:          /blog/myblog/abouttest
     type:         abouttest
     external:     false
   - name:         股票
-    url:          /myblog/stock
+    url:          /blog/myblog/stock
     type:         stock
     external:     false
   - name:         其它
-    url:          /myblog/other
+    url:          /blog/myblog/other
     type:         other
     external:     false
 blog_1:    recent
