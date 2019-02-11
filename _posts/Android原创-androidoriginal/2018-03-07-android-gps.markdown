@@ -9,7 +9,7 @@ author: # Add name author (optional)
 androidoriginal: true
 ---
 
-{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 在做轨迹相关功能时经常需要GPS解析，从GPS文件中我们可以提取出经纬度信息，速度，方向，时间等信息。<br>
 GPS格式可阅读[这篇博客](https://leach-chen.github.io/GPS-file/ "点击前往")。

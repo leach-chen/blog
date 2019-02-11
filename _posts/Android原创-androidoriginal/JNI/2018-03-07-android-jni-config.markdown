@@ -9,7 +9,7 @@ author: # Add name author (optional)
 androidoriginal: true
 ---
 
-{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 主要记录下Android Studio下JNI项目搭建**配置方法、C++支持方式、函数静态动态注册,打印LOG到控制台**。
 

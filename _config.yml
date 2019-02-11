@@ -104,6 +104,10 @@ links1:
     url:          /blog/myblog/flutter
     type:         flutter
     external:     false
+  - name:         Html/Vue
+    url:          /blog/myblog/vue
+    type:         vue
+    external:     false
   - name:         FFmpeg
     url:          /blog/blog/ffmpeg
     type:         ffmpeg
@@ -140,7 +144,7 @@ blog_9:    flutter
 blog_10:   ffmpeg
 blog_11:   opengl
 blog_12:   hacker
-blog_13:
+blog_13:   vue
 blog_14:
 blog_15:
 blog_16:

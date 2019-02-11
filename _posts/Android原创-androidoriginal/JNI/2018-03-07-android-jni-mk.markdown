@@ -9,7 +9,7 @@ author: # Add name author (optional)
 androidoriginal: true
 ---
 
-{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 看一个简单的Android.mk的例子：
 >LOCAL_PATH := $(call my-dir)<br>

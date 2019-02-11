@@ -9,6 +9,6 @@ author: # Add name author (optional)
 androidoriginal: true
 ---
 
-{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 记录用到的JNI函数用法，持续更新...

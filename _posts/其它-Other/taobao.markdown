@@ -9,7 +9,7 @@ author: # Add name author (optional)
 other: true
 ---
 
-{{site.label1}} <a href="https://leach-chen.github.io/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
 
 ## 淘宝天猫优惠券微信群##
 
