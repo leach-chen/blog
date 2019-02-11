@@ -68,19 +68,19 @@ androidoriginal: true
 
 **a.默认返回值方式**
 
-"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/first.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/first.jpg" height = "300px"/>
 
 **b.dispatchTouchEvent 返回true**
 
-"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/second.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/second.jpg" height = "300px"/>
 
 **c.onInterceptTouchEvent 返回true**
 
-"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/third.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/third.jpg" height = "300px"/>
 
 **d.onTouchEvent 返回true**
 
-"<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/four.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/androidoriginal/view/eventpass/four.jpg" height = "300px"/>
 
 
 

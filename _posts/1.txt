@@ -2,5 +2,5 @@
 [Desktop](https://desktop.github.com/ "点击前往")
 
 
-"<img src="{{site.imagepath}}/assets/img/blog/jekyll/jekyll_github/blog_demo.png" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/jekyll/jekyll_github/blog_demo.png" height = "300px"/>
 ![image]()

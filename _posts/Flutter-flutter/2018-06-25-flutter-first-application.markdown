@@ -13,7 +13,7 @@ flutter: true
 
 主要介绍下如何用Flutter创建一个应用程序，程序一步步由简单到复杂，操作步骤来自官方，我觉得官方的已经写得挺好的了，我这里就搬过来，方便阅读，先查看下应用程序运行效果：
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/0.gif" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/0.gif" />
 
 
 ## 第1步: 创建 Flutter app ##
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
 ```
 **b.** 运行应用程序，你应该看到如下界面.
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/1.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/1.png" />
 
 
 **分析**
@@ -137,7 +137,7 @@ class MyApp extends StatelessWidget {
 
 如果应用程序正在运行，请使用热重载按钮 (lightning bolt icon) 更新正在运行的应用程序。每次单击热重载或保存项目时，都会在正在运行的应用程序中随机选择不同的单词对。 这是因为单词对是在 build 方法内部生成的。每次MaterialApp需要渲染时或者在Flutter Inspector中切换平台时 build 都会运行.
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/2.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/2.png" />
 
 ## 第3步: 添加一个 有状态的部件（Stateful widget） ##
 
@@ -217,7 +217,7 @@ restarting.
 
 应用程序应该像之前一样运行，每次热重载或保存应用程序时都会显示一个单词对。
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/3.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/3.png" />
 
 ## 第4步: 创建一个无限滚动ListView ##
 
@@ -328,7 +328,7 @@ class MyApp extends StatelessWidget {
 
 重新启动应用程序。你应该看到一个单词对列表。尽可能地向下滚动，您将继续看到新的单词对。
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/4.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/4.png" />
 
 
 ## 第5步: 添加交互 ##
@@ -412,7 +412,7 @@ Widget \_buildRow(WordPair pair) {
 
 热重载你的应用。你就可以点击任何一行收藏或移除。请注意，点击一行时会生成从心形 ❤️ 图标发出的水波动画
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/5.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/5.png" />
 
 ## 第6步: 导航到新页面 ##
 
@@ -538,9 +538,9 @@ void \_pushSaved() {
 
 **f.** 热重载应用程序。收藏一些选项，并点击应用栏中的列表图标，在新路由页面中显示收藏的内容。 请注意，导航器会在应用栏中添加一个“返回”按钮。你不必显式实现Navigator.pop。点击后退按钮返回到主页路由。
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/6.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/6.png" />
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/7.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/7.png" />
 
 ## 第7步：使用主题更改UI ##
 
@@ -569,7 +569,7 @@ class MyApp extends StatelessWidget {
 
 **c.** 作为读者的一个练习，使用 ThemeData 来改变UI的其他方面。 Material library中的 Colors类提供了许多可以使用的颜色常量， 你可以使用热重载来快速简单地尝试、实验。
 
-"<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/8.png" />
+<img src="{{site.imagepath}}/assets/img/blog/flutter/firstapplication/8.png" />
 
 
 ```

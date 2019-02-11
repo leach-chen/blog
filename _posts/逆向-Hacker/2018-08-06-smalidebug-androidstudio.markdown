@@ -33,7 +33,7 @@ adb shell am start -D -n com.example/.start.StartupActivity
 
 DDMS可以在开发工具里找到,启动的时候最好关闭Android Studio，找不到去到你的Android SDK安装目录tools/ddms.bat,双击ddms.bat启动DDMS，记下红色选择的端口7697,8700
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/1.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/1.jpg" height = "300px"/>
 
 
 记得要关闭DDMS再执行该命令，否则会提示端口被占用
@@ -45,7 +45,7 @@ adb shell
 top | grep apk包名关键字
 ```
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/5.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/5.jpg" height = "300px"/>
 
 
 **若android studio debug的时候无效，则需要先关闭android studio，再从头开始执行上面的步骤**
@@ -66,20 +66,20 @@ Run->Edit Configurations..,
 
 点击+，输入一个名称如：DebugSmali，Port填入刚刚的8700
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/2.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/2.jpg" height = "300px"/>
 
 
 **7.配置JDK**
 
 File->Project Structure...,按如下图配置,红框内内容根据你实际情况选择:
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/3.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/3.jpg" height = "300px"/>
 
 **8.启动调试**
 
 点击工具栏的调试按钮即可启动调试
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/4.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/smaliandroidstudio/4.jpg" height = "300px"/>
 
 <a href="https://www.cnblogs.com/lanrenxinxin/p/4891424.html" style="text-decoration: none;" target="\_blank"  title="">参考1</a>
 <a href="https://blog.csdn.net/daide2012/article/details/75332798" style="text-decoration: none;" target="\_blank"  title="">参考2</a>

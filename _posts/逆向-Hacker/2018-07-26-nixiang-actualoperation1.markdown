@@ -169,15 +169,15 @@ public void Ourpalm_Init(String paramString1, String paramString2, String paramS
 
 在函数列表里搜索那个native函数RunSign
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/1.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/1.jpg" height = "300px"/>
 
 调整下设置，可显示函数地址：
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/2.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/2.jpg" height = "300px"/>
 
 设置完成后如下图所示：
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/3.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/3.jpg" height = "300px"/>
 
 上图中红色标记的是checksign，checkdexex的地址，下面那个红色框显示的是当前鼠标放在对应代码上的函数或者变量的内存地址，
 
@@ -191,7 +191,7 @@ checkdexex FF F7 55 FD 地址起始位置：00244CE
 
 用WinHex打开libourpalm_sdk_a.so，搜索checksign地址内容FFF73EFF,选择起始地址为00244C4的那项
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/4.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/4.jpg" height = "300px"/>
 
 点击进去，将FF F7 3E FF 改成C0 46 C0 46
 
@@ -199,7 +199,7 @@ checkdexex FF F7 55 FD 地址起始位置：00244CE
 
 将so保存后，重新用IDA Pro打开，按照上面方法，打开Runsign函数，可以发现这两个函数被注释掉了
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/5.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/5.jpg" height = "300px"/>
 
 10.**在OnyxActivity.smali onCreate里面添加Toast代码**
 
@@ -218,7 +218,7 @@ checkdexex FF F7 55 FD 地址起始位置：00244CE
 
 重新回编APK，签名，安装，发现可以正常跑起来了，但是我发现需要加载完成正常进入游戏，按返回键退出APP，否则会导致下次启动不起来
 
-"<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/6.jpg" height = "300px"/>
+<img src="{{site.imagepath}}/assets/img/blog/hacker/actualoperation1/6.jpg" height = "300px"/>
 
 破解了这个之后，就可以在你想要继续破解的地方修改代码就可以了，目前我还没有去尝试，有些应用加了壳的话要先脱壳，拿到真正的dex，才能进入到下面一步
 
