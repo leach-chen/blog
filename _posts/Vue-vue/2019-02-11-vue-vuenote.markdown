@@ -110,3 +110,104 @@ export default {
 aa
 
 ```
+
+
+## **注册组件** ##
+
+```
+第一步在back.vue中导出组件
+
+<template>
+  <div>
+    <!-- <el-button id="common-back" icon="back" slot="left" v-on:click="goBack"></el-button> -->
+    <mt-header id="common-back">
+      <mt-button  icon="back" slot="left" @click="goBack">返回</mt-button>
+    </mt-header>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "commonback",
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    }
+  }
+};
+</script>
+
+
+<style>
+#common-back {
+  width: 100%;
+  height: 50px;
+}
+</style>
+
+第二步在main.js中注册组件
+import back from '@/components/back'
+Vue.component('commonback', {
+  render: back.render,
+  data: back.data,
+  methods:back.methods
+})
+
+第三步在test.vue中使用组件
+
+<template>
+    <div>
+      <commonback></commonback>
+        {{msg}}
+
+    </div>    
+</template>
+
+<script>
+
+ //局部注册组件
+//import back from '@/components/back'
+export default {
+    data(){
+        return{
+            msg:"aaa"
+        };
+    },
+    //  components:{
+    //     "commonback":back
+    //  }
+}
+</script>
+
+```
+
+## **引入外部js** ##
+
+```
+第一步在外部js中定义方法
+function diyfun() {
+    alert("bbbbb")
+}
+export {
+    diyfun
+}
+第二步在test.vue中
+
+<script>
+import {diyfun} from '../public/js/aa.js' //注意路径
+export default {
+ data () {
+  return {
+   testvalue: ''
+  }
+ },
+ methods:{
+   myfun:function(){
+     diyfun();
+   }
+ }
+}
+</script>
+
+<button @click="myfun">测试</button>
+```
