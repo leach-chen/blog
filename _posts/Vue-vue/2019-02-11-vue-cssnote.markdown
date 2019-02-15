@@ -85,3 +85,16 @@ space- between：两端对齐
 space-around：沿轴线均匀分布
 
 stretch：各行将根据其flex-grow值伸展以充分占据剩余空间
+
+
+**float**
+
+relarive 使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。
+
+absolute 
+
+<div id="相对元素a">
+     <div id="绝对元素b"></div>
+</div>
+
+如果a没有position:relative,b的postion:absolute则是以body绝对定位
