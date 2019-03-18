@@ -9,7 +9,7 @@ author: # Add name author (optional)
 vue: true
 ---
 
-{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
 
 VuePress文档类网站搭建，开源的，可定制化程度高，vue语法。参考以下网址，后面有时间整理语言。
 

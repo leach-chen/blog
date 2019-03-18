@@ -9,7 +9,7 @@ author: # Add name author (optional)
 other: true
 ---
 
-{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
 
 成达科三注意事项和先后顺序流程表 <br>
 **1，** 起步 <br>

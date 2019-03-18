@@ -9,7 +9,7 @@ author: # Add name author (optional)
 flutter: true
 ---
 
-{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
 
 记录用Flutter开发一些基本用法，基于Android Studio,持续更新...
 

@@ -9,7 +9,7 @@ author: # Add name author (optional)
 hacker: true
 ---
 
-{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">Leach Chen</a> {{site.label2}}
+{{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
 
 
 **主要记录预防破解的一些思路**  <br>
