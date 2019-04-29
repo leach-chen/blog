@@ -43,7 +43,7 @@ Git命令行比打开客户端操作更快捷，持续更新。
 1. 推送远程仓库
 >$ git push [remoteName] [localBranchName]
 
-1. 仓库迁移，先从源仓库克隆：git clone --bare git://github.com/username/project.git--->cd project.git--->在新的地址上创建仓库newproject.git，git push ––mirror git@example.com/username/newproject.git
+1. 仓库迁移，先从源仓库克隆：git clone ––bare git://github.com/username/project.git--->cd project.git--->在新的地址上创建仓库newproject.git，git push ––mirror git@example.com/username/newproject.git
 
 1. <a href="https://www.jianshu.com/p/7182b2faab84" style="text-decoration: none;" target="\_blank"  title="">免密码</a>
 >方式一（该方式设置了我不知道怎么取消记住密码）：<br>
