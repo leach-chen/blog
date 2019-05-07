@@ -12,7 +12,7 @@ androidoriginal: true
 
 后续更新...
 
-1. 安装intellij idea
+1. 安装intellij idea(收藏地址，配置maven)
 
 2. 创建springboot init项目
 
