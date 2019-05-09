@@ -16,4 +16,8 @@ androidoriginal: true
 
 2. 创建springboot init项目
 
-3. 多模块配置
+3. 多模块配置,pom配置文件 https://blog.csdn.net/hpc_2015/article/details/81358165 https://blog.csdn.net/hpc_2015/article/details/81358165
+
+4. 配置里的build放在application所在pom里，否则会报错
+
+5. 多模块配置，每个模块parent为项目初始类（不能为公共模块，否则会导致公共模块打包时打包不出来class文件），每个模块需要添加build配置输出路径
