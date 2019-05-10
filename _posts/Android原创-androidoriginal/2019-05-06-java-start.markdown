@@ -23,3 +23,5 @@ androidoriginal: true
 5. 多模块配置，每个模块parent为项目初始类（不能为公共模块，否则会导致公共模块打包时打包不出来class文件），每个模块需要添加build配置输出路径
 
 6. mybatis 配置
+
+7. kotlin打包每个目录下都要放build配置，否则可能有些类打不出来，目录层级也要多一级
