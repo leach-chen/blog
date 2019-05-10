@@ -25,3 +25,5 @@ androidoriginal: true
 6. mybatis 配置
 
 7. kotlin打包每个目录下都要放build配置，否则可能有些类打不出来，目录层级也要多一级
+
+8. 打包过程中若出现异常，则要看target目录下是否对应的类都生成了
