@@ -211,3 +211,43 @@ export default {
 
 <button @click="myfun">测试</button>
 ```
+
+
+## **:class** ##
+
+```
+https://www.cnblogs.com/big-snow/p/5718728.html
+HTML代码：
+<div :class="classA">Demo2</div>
+
+Javascript代码：
+data: {
+  classA: 'class-a'  //当classA改变时将更新class
+}
+渲染后的HTML:
+<div class="class-a">Demo2</div>
+```
+
+
+## **computed** ##
+
+```
+https://www.cnblogs.com/gunelark/p/8492468.html
+自己的理解：
+
+computed用来监控自己定义的变量，该变量不在data里面声明，直接在computed里面定义，然后就可以在页面上进行双向数据绑定展示出结果或者用作其他处理；
+computed比较适合对多个变量或者对象进行处理后返回一个结果值，也就是数多个变量中的某一个值发生了变化则我们监控的这个值也就会发生变化，举例：购物车里面的商品列表和总金额之间的关系，只要商品列表里面的商品数量发生变化，或减少或增多或删除商品，总金额都应该发生变化。这里的这个总金额使用computed属性来进行计算是最好的选择
+与watch之间的区别：
+
+刚开始总是傻傻分不清到底在什么时候使用watch，什么时候使用computed。这里大致说一下自己的理解：
+
+watch主要用于监控vue实例的变化，它监控的变量当然必须在data里面声明才可以，它可以监控一个变量，也可以是一个对象
+
+computed相比method中，computed方法体只执行一次，除非里面依赖的值发生了改变，性能更高
+```
+
+## **store** ##
+https://blog.csdn.net/qq_38658567/article/details/82847758
+```
+当我们在页面上点击一个按钮，它会处发(dispatch)一个action, action 随后会执行(commit)一个mutation, mutation 立即会改变state, state 改变以后,我们的页面会state 获取数据，页面发生了变化。 Store 对象，包含了我们谈到的所有内容，action, state, mutation，所以是核心了
+```
