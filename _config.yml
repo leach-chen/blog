@@ -108,8 +108,12 @@ links1:
     url:          /blog/myblog/vue
     type:         vue
     external:     false
+  - name:         原理
+    url:          /blog/myblog/theory
+    type:         theory
+    external:     false
   - name:         FFmpeg
-    url:          /blog/blog/ffmpeg
+    url:          /blog/myblog/ffmpeg
     type:         ffmpeg
     external:     false
   - name:         OpenGL
@@ -145,7 +149,7 @@ blog_10:   ffmpeg
 blog_11:   opengl
 blog_12:   hacker
 blog_13:   vue
-blog_14:
+blog_14:   theory
 blog_15:
 blog_16:
 
