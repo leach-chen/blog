@@ -114,23 +114,6 @@ dispatchOnTouchEvent->onIntentceptTouchEvent->onTouchEvent(return true)，循环
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Activity ##
 
 ### **1. Activity生命周期** ###
@@ -374,3 +357,94 @@ RxJava原理，Retrofit原理，GreenDao原理，OkHttp原理
 数据结构
 
 算法
+
+
+
+
+
+
+
+## 性能优化 ##
+
+**内存优化**
+
+内存泄漏排查，通过android studio自带的性能分析工具，分析内存，cpu的占用情况。
+
+**代码审查重构**
+
+项目稳定后对代码进行review找到可能之前没注意存在漏洞的地方，或者有UI大改版时进行重构，进一步优化项目架构，降低模块耦合度。还有优化算法，降低代码的时间复杂度和空间复杂度
+
+**布局优化**
+
+在开发者模式里面开启GPU过度绘制开关，查看颜色较深区域，看布局是否有优化空间
+
+**绘制优化**
+
+如果有自定义view之类的需要重写onDraw，该方法调用频率比较高，在里面代码需要精炼
+
+**响应应速度优化**
+
+主线程不要做任务过于复杂的工作，否则会导致ANR
+
+**线程优化**
+
+采用线程池，线程池内部本身就做了优化，避免频繁的创建销毁线程，避免大量资源抢占线程造成资源堵塞
+
+
+**ListView/RecycleView优化**
+
+ListView/RecycleView的优化思想主要从以下几个方面入手：
+1：局部刷新
+
+2：分页加载
+
+3：异步加载
+
+4：使用ViewHolder
+
+5：图片设置缓存
+
+**Bitmap优化**
+
+假设有一张大图
+
+首先创建一个BitmapFactory.option属性对象，设置injustdecodebound属性为true，这样图片不用加载到内存即可以获取到图片的宽高信息。然后再重新计算图片的缩放比例，再设置给option的insamplesize，然后再将injustdecodebound设置为false，此时加载到内存的图片是缩放比例大小的图片。
+
+设置压缩图片的类型：options.inPreferredConfig = Bitmap.Config.RGB_565;
+
+
+
+
+## 内存泄漏 ##
+
+https://www.jianshu.com/p/ab4a7e353076
+
+内存泄漏的根本原因是与应用同等生命周期长度的对象持有需要被回收的对象的引用，导致该对象不能被回收，造成内存泄漏
+
+**单例导致内存泄漏(静态变量)**
+
+```
+public class AppSettings {
+
+    private static AppSettings sInstance;
+    private Context mContext;
+
+    private AppSettings(Context context) {
+        this.mContext = context;
+    }
+
+    public static AppSettings getInstance(Context context) {
+        if (sInstance == null) {
+            sInstance = new AppSettings(context);
+        }
+        return sInstance;
+    }
+}
+
+```
+
+**非静态内部类导致内存泄漏(广播，Retrofit+RxJava，定时器，线程)**
+
+非静态内部类会持有外部类的引用，当这个内部类的生存期比外部类还长时就会造成内存泄漏
+
+**集合中的对象未清理造成内存泄露、属性动画造成内存泄露、WebView造成内存泄露**
