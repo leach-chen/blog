@@ -76,6 +76,8 @@ https://blog.csdn.net/yeyazhishang/article/details/82353846
 
 https://baijiahao.baidu.com/s?id=1609200503642486098&wfr=spider&for=pc
 
+https://www.nowcoder.com/discuss/1799
+
 **数组**
 
 寻址方便，遍历方便，固定大小后无法扩容，增删麻烦。适用于频繁查询，对存储空间要求不大，很少增加和删除的情况
