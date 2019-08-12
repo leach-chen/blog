@@ -1,17 +1,16 @@
 ---
 layout: post
-title: OkHttp原理
-date:  2019-07-31 14:15:00 +0900
-description: OkHttp原理
+title: Android Studio Gradle Plugin开发
+date:   2018-03-20 18:37:00 +0900  
+description:  Android Studio Gradle Plugin开发
 img: post-2.jpg # Add image post (optional)
-tags: [原理]
+tags: [Android]
 author: # Add name author (optional)
-theory: true
+
+#androidoriginal: true
+needcomplete: true
 ---
 
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
 
-okhttp原理
-glide原理
-设计模式
-算法
+敬请期待

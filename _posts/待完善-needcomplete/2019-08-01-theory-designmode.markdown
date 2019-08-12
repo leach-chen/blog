@@ -1,12 +1,14 @@
 ---
 layout: post
 title: 设计模式
-date:  2019-07-31 18:08:00 +0900
+date:  2018-03-20 18:08:00 +0900
 description: 设计模式
 img: post-3.jpg # Add image post (optional)
 tags: [原理，设计模式]
 author: # Add name author (optional)
-theory: true
+
+#theory: true
+needcomplete: true
 ---
 
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}

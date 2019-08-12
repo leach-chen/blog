@@ -1,12 +1,14 @@
 ---
 layout: post
 title: VuePress 文档类网站搭建
-date:  2019-02-20 10:31:00 +0900  
+date:  2018-03-20 10:31:00 +0900  
 description: Vue
 img: post-10.jpg # Add image post (optional)
 tags: [Html,Vue]
 author: # Add name author (optional)
-vue: true
+
+#vue: true
+needcomplete: true
 ---
 
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}

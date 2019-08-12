@@ -1,12 +1,14 @@
 ---
 layout: post
 title: CSS 摘记
-date:  2019-02-11 12:40:00 +0900  
+date:  2018-03-20 12:40:00 +0900  
 description: Vue
 img: post-6.jpg # Add image post (optional)
 tags: [Html,Vue]
 author: # Add name author (optional)
-vue: true
+
+#vue: true
+needcomplete: true
 ---
 
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
@@ -91,7 +93,7 @@ stretch：各行将根据其flex-grow值伸展以充分占据剩余空间
 
 relarive 使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。
 
-absolute 
+absolute
 
 <div id="相对元素a">
      <div id="绝对元素b"></div>

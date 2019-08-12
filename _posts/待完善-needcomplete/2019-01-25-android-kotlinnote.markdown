@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Kotlin 摘记
-date:  2019-01-25 17:37:00 +0900  
+date:  2018-03-20 17:37:00 +0900  
 description:  Kotlin 摘记
 img: post-1.jpg # Add image post (optional)
 tags: [Android]
 author: # Add name author (optional)
-androidoriginal: true
+
+#androidoriginal: true
+needcomplete: true
 ---
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}
 

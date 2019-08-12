@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Socket、tcp、udp、http、https原理
-date:  2019-07-31 14:06:00 +0900
+date:  2018-03-20 14:06:00 +0900
 description: Socket、tcp、udp、http、https原理
 img: post-11.jpg # Add image post (optional)
 tags: [原理]
 author: # Add name author (optional)
-theory: true
+
+#theory: true
+needcomplete: true
 ---
 
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}

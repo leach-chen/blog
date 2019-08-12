@@ -1,12 +1,14 @@
 ---
 layout: post
 title: Tencent
-date:  2019-08-06 18:08:00 +0900
+date:  2018-03-20 18:08:00 +0900
 description: Tencent
 img: post-3.jpg # Add image post (optional)
 tags: [原理]
 author: # Add name author (optional)
-theory: true
+
+#theory: true
+needcomplete: true
 ---
 
 
