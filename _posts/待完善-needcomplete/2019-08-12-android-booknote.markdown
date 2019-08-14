@@ -1,0 +1,30 @@
+---
+layout: post
+title: 阅读书籍摘记
+date:  2018-03-20 15:41:00 +0900
+description: 阅读书籍摘记
+img: post-3.jpg # Add image post (optional)
+tags: [Android]
+author: # Add name author (optional)
+
+#androidoriginal: true
+needcomplete: true
+---
+
+##深入理解JAVA虚拟机##
+
+
+
+##深入解析Android虚拟机##
+
+
+
+##深入理解Java7：核心技术与最佳实践##
+
+. java 由类加载器加载进行执行，类加载器本身是java类，它也需要加载器进行加载，不过它是由原生代码来实现的。它称为启动类加载器，负责加载java自身的核心类到虚拟机，启动类加载器完成加载工作后，其它继承自ClassLoader类的类加载器可以正常工作。
+
+。类加载器分为启动类加载器和用户自定义的类加载器，用户自定义的类加载器一部分由java平台默认提供，另一部分由程序创建。java平台默认提供一个扩展类加载器，用来从特定路径加载，还有一个系统类加载器，它根据应用程序运行的classpath路径来加载java类。如果程序本身没有定义其它自定义类加载器，则程序本身的java类都由系统类加载器进行加载，getsystemclassloader可以得到系统类加载器对象，通过系统类加载器的对象getparent方法可以得到扩展类加载器对象。
+
+启动类加载器：原生方法实现，加载java核心类到虚拟机，加载完成后，自定义类加载器可开始工作
+
+用户自定义的类加载器：1：从特定路径加载类的扩展类加载器 2：根据程序运行路径加载类的系统加载器
