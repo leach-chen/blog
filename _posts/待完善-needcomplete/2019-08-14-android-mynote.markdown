@@ -98,7 +98,6 @@ https://blog.csdn.net/qq84549557/article/details/78880830
 主要多个线程使用同一个变量时，会互相造成干扰，那么通过这个类，会给每个类复制一份变量的副本，副本隔离，互不干扰。
 
 
-
 **Android内存管理机制**
 
 **synchronized理解**
