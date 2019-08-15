@@ -64,7 +64,21 @@ needcomplete: true
 
 2：通过代码计算，如一屏横向放3张图，可通过代码计算设置
 
-3：
+**APP布局优化**
+
+hierarchy viewer，Lint tool 布局调优工具
+
+1：使用include标签减少复用布局而产生的布局嵌套。提取布局间的公共部分，通过提高布局的复用性从而减少测量 & 绘制时间
+
+2：merge用于辅助include标签，可将include布局里面顶层布局替换掉，减少布局层级
+
+3：ViewStub在需要的时候加载显示
+
+4：首先使用相对布局， 一般情况下用LinearLayout的时候总会比RelativeLayout多一个View的层级
+
+5：嵌套LinearLayout中尽量不要使用weight，因为weight会重新测量两次
+
+6：View视图的显示隐藏，尽量使用invisible，因为gone,不占用空间，视图会重新测量绘制；而invisible视图不会重新绘制，但仍然占用空间位置
 
 **APP屏幕密度**
 
@@ -89,16 +103,45 @@ https://blog.csdn.net/qq84549557/article/details/78880830
 
 **JVM和DVM和ART区别**
 
+1：JVM是java虚拟机，基于栈，解析的是class字节码
+
+2：DVM是Android虚拟机，基于寄存器，其需要多一步将class字节码转换成dex，允许里面运行多个进程，其存取速度比栈快的多，栈要更多的指令分派和内存访问次数。
+
+3：Android 5.0后ART取代了DVM虚拟机，ART直接执行的是本地机器码，安装过程中就编译成了本地机器码，DVM需要通过JIT即时编译器将将DEX转换成本地机器码执行。
+
+
 **JVM内存管理机制**
 
+1：JVM内存回收区域为堆，虚拟机栈本地方法栈，方法区
+
+2：首先找到垃圾，通过引用计数法和可达性分析法，引用计数存在相互引用问题导致无法回收，可达性分析法一般以堆上存活对象作为GC Root根对象根据引用链往下查找，根对象不可达的对象是可以回收的对象
+
+3：回收垃圾，有标记法，易造成内存碎片化，复制法空间占用大，效率高，标记整理法，和分代法。分代法分为新生代和老年代，新生代分为Eden和两个Survivor，比例为8:1:1，因为研究发现，新生代Eden区和第一个survivor区90%的对象都会回收，当第一次GC时会把eden区里存活的对象拷贝到第一个survivor区，当再次GC时，通过复制算法，将Eden和第一个survivor区的存活对象拷贝到第二个survivor区。当第二个survivor区满了的时候，会将这些存活对象拷贝到老年代中。如果人为触发GC发现Survivor空间不够时，会担保进入老年代。
+
+**Android内存管理机制**
+
+DVM内存管理：
+
+基于JVM回收机制，运用更好的算法帮助执行，默认用的标记擦除回收算法，
+
+ART内存管理：
+
+主要基于Mark-Sweep GC和Compacting GC
+
+
 **强引用，软引用，弱引用，虚引用**
+
+1：强引用，new对象直接创建的
+
+2：软引用，内存不够时进行回收
+
+3：弱引用，GC时进行回收不管内存是否够用
+
+4：虚引用，被回收时收到通知，一个对象是否有虚引用的存在，完全不会对其生存时间构成影响，也无法通过虚引用来取得一个对象实例。为一个对象设置虚引用关联的唯一目的就是能在这个对象被收集器回收时收到一个系统通知。
 
 **threadlocal作用**
 
 主要多个线程使用同一个变量时，会互相造成干扰，那么通过这个类，会给每个类复制一份变量的副本，副本隔离，互不干扰。
-
-
-**Android内存管理机制**
 
 **synchronized理解**
 
@@ -125,3 +168,25 @@ https://blog.csdn.net/qq84549557/article/details/78880830
 **Android AMS WMS工作原理**
 
 **Android Activity启动过程**
+
+**Android Surfaceview双缓冲**
+
+**Android Webview 用法及优化**
+
+**Android Viewpager懒加载**
+
+**JAVA 类加载过程**
+
+**JAVA 线程状态**
+
+**JAVA final，finally，finallize区别**
+
+final:其修饰的常量不可更改，方法无法重载，类无法继承
+
+finally：任何执行try 或者catch中的return语句之前，（如果有finally）都会先执行finally语句。
+如果finally中有return语句，那么程序就return了，所以finally中的return是一定会被return的，
+编译器把finally中的return实现为一个warning
+
+finallize：对象在内存回收之前，可重写该函数，将对象重新挂上引用链，如果再次GC时finallize方法不会再执行，对象将被回收
+
+**JAVA 接口和抽象类区别**
