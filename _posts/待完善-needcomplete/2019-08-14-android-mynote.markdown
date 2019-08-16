@@ -145,25 +145,111 @@ ART内存管理：
 
 **synchronized理解**
 
+1：加锁，主要为了解决线程并发导致抢占资源问题
+
+2：synchronized代码修饰的代码段，查看字节码会加上monitorenter和monitorexit，线程要进入时，需要获取monitor对象，同时计数加1，当其它线程要进入时，因为计数不为0，它就要等待，直到当前执行的线程执行到monitorexit退出，monitor计数变为0.它才能获得所有权
+
 **volatile理解**
+
+每个线程都有自己的工作内存及所有线程对应的主存，为提高效率，线程会拷贝变量的副本，操作完成后再同步回主存。变量的值对所有线程是透明的，相当于告诉线程从主存去获取该变量值，防止多线程并发时对该变量操作产生问题
 
 **线程池创建方式**
 
+1：newFixedThreadPool,创建固定大小的线程池，LinkedBlockingQuene作为阻塞队列，线程池中没有任务也不会释放线程
+
+2：newCachedThreadPool,创建缓存线程池，线程超过1分钟没有任务会释放，最大可创建2^31个线程，内部使用SynchronousQueue作为阻塞队列
+
+3：newSingleThreadExecutor,创建只有一个线程的线程池，当该线程没有正常完成任务，会启动另一个线程继续完成任务，内部使用LinkedBlockingQueue作为阻塞队列
+
+4：newScheduledThreadPool,创建定时任务的线程
+
+ThreadPoolExecutor类构造器：
+
+1：核心线程数
+
+2：最大线程数
+
+3：阻塞队列处理方式
+
+4：线程工厂
+
+5：线程拒绝处理时是使用策略
+
+**线程池状态**
+
+1：新建
+
+2：可运行
+
+3：运行中
+
+4：阻塞
+
+5：消亡
+
 **HaseMap理解**
+
+1：纵向是数组，横向是链表+红黑树，通过key进行hashcode运算，它是根据key的内存地址得到一个整形值，然后对其与数组长度进行取余得到数据在数组中的位置。然后通过equal与key在链表上进行比较，如果存在则替换，否则追加。当链表长度超过8时JDK1.8上会转换成红黑树
+
+2：一般字符串常量或者整形作为key，因为不可变。也可以自定义对象作为key，但是需要重写hashcode和equal，因为当两个对象在堆上是对应两个地址空间时，按默认的hashcode运算，这两个对象hashcode是不相同的，所以要重写hashcode让其相同。同样equal默认跟==效果一样，值和内存地址都要
+相同，那么此时我们需要重写它，让其只比较某些值相同则相同
+
 
 **常用排序算法原理及实际复杂度**
 
+1：冒泡排序，稳定，双层循环，一个缓存值的变量，每轮循环两两相比，不符合条件则交换位置。最优时间复杂度n，最差n^2
+
+2: 插入排序，稳定，双层循环，一个缓存值的变量，假设第n个之前都是排好序的，第n+1个从后往前与前面的值进行比较，temp值等于第n+1位置的值，若不符合条件则相邻两个值互换位置，若符合条件则直接退出当前循环，用temp值放入比较到的位置，最优时间复杂度n，最差n^2
+
+3：快速排序，不稳定，双层循环，一个缓存位置的值，加上当前第i个值是最小的，第二层循环依次两两比较，若不符合条件则将最小值的位置替换为新的位置值，依次完成与后面的值的比较，比较完成后，若位置i有变化，则与那个值进行互换。最优时间复杂度nlog2n，最差n^2
+
 **常用数据结构**
+
+1：HashMap 线程不安全，Hashtable线程安全，ConcurrentHashMap同步性能更好
+
+2：ArrayList，可变数组，线程不安全，当数据长度超过容量，会将数组按原来长度延长50%，然后把数据拷贝进去，vector，也是可变数组，线程安全，容量超过默认扩充到原来2倍，LinkedList是双向链表，SparseArray是基于两个数组的map，产生冲突直接覆盖
 
 **Android系统架构**
 
-**Android自定义VIEW**
+1：应用层
+
+2：framework层，封装的系统组件
+
+3：运行层，基于c/c++，DVM运行于此层
+
+4：linux内核层
+
+**Android自定义VIEW**（待完善）
+
+1：attr.xml 里面添加自定义属性，布局里添加 xmlns:android_custom="http://schemas.android.com/apk/res-auto"，通过TypedArray obtainStyledAttributes获取到自定义属性数组
+
+2：onMeasure
+
+3：onLayout
+
+4：onDraw
+
+5：其它，viewtreeobservable，onfourcechange，。。
 
 **Android Filter**
 
+1：action匹配任意一个，category都要匹配，data匹配任意一个
+
 **Android Handler机制**
 
+ActivityThread 创建时会执行main方法，调用looprpemainloop，创建loop对象及messagequeue对象，每个handler与一个message对象对应，message对象持有handler对象引用，handler可以往消息队列里面添加对象，当消息循环到时，通过message保存的handler对象回调出来，
+进行相应业务处理
+
+
+**Android 主线程无线循环为什么不会卡死**
+
+进入无线循环之前创建了binder线程，binder线程与WMS，AMS交互，binder再通过handler与主线程交互
+
 **Android Binder机制**
+
+1：分为服务端，会创建一个binder引用，驱动层，会创建一个mRemote binder引用，还有客户端
+
+2：当服务端和客户端处于同一个进程时，客户端获取到的是服务端的这个binder引用，当不在同一个进程，获取到的是驱动层的mRemote Binder引用
 
 **Android AMS WMS工作原理**
 
@@ -173,11 +259,39 @@ ART内存管理：
 
 **Android Webview 用法及优化**
 
+**Android Viewpager注意**
+
+1：实现PagerAdapter，ViewPager.OnPageChangeListener
+
+2：在instantiateItem创建类
+
+3：在destroyItem移除view
+
+4：getItemPosition POSITION_NONE重新创建view
+
+
 **Android Viewpager懒加载**
+
+1：通过setUserVisibleHint里面的boolean值，判断是否加载，依然是三个界面，只是不加载数据
+
+2：onPageSelected的时候再去初始化界面
 
 **JAVA 类加载过程**
 
 **JAVA 线程状态**
+
+1：新建
+
+2：运行
+
+3：阻塞
+
+4：等待
+
+5：超时
+
+6：终止
+
 
 **JAVA final，finally，finallize区别**
 
@@ -190,3 +304,12 @@ finally：任何执行try 或者catch中的return语句之前，（如果有fina
 finallize：对象在内存回收之前，可重写该函数，将对象重新挂上引用链，如果再次GC时finallize方法不会再执行，对象将被回收
 
 **JAVA 接口和抽象类区别**
+
+
+**Android WebView 用法**
+
+1：通过addJavascriptInterface注入js方法
+
+2：WebChromeClient，处理Javascript的对话框、网站图标、网站标题以及网页加载进度等
+
+3：WebViewClient，处理各种通知、请求等事件
