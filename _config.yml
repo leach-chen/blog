@@ -63,7 +63,7 @@ exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
 
 links:
   - name:         Home
-    url:          /
+    url:          https://www.leachchen.com
     external:     false
   - name:         About
     url:          /blog/about
