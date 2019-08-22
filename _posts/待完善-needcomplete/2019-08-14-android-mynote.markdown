@@ -320,3 +320,16 @@ finallize：对象在内存回收之前，可重写该函数，将对象重新�
 2：WebChromeClient，处理Javascript的对话框、网站图标、网站标题以及网页加载进度等
 
 3：WebViewClient，处理各种通知、请求等事件
+
+
+**热修复原理,DEX**
+
+**View SuferaceView GLSuferaceView区别**
+
+**JNI理解**
+
+**JNI基本用法**
+
+**FFmpeg解码MP4**
+
+**FFmpeg解码H264**
