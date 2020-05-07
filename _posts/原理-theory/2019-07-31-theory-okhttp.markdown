@@ -7,8 +7,8 @@ img: post-2.jpg # Add image post (optional)
 tags: [原理]
 author: # Add name author (optional)
 
-#theory: true
-needcomplete: true
+theory: true
+#needcomplete: true
 ---
 
 {{site.label1}} <a href="https://www.leachchen.com/" target="\_blank">https://www.leachchen.com/</a> {{site.label2}}

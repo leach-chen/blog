@@ -7,8 +7,8 @@ img: post-3.jpg # Add image post (optional)
 tags: [原理]
 author: # Add name author (optional)
 
-#theory: true
-needcomplete: true
+theory: true
+#needcomplete: true
 ---
 
 
