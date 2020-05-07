@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Handler原理
-date:  2018-03-16 09:50:00 +0900
-description: Handler原理
-img: post-7.jpg # Add image post (optional)
-tags: [Android，Handler，原理]
+title: Retrofit原理
+date:  2018-03-19 09:50:00 +0900
+description: Retrofit原理
+img: post-9.jpg # Add image post (optional)
+tags: [Android，Retrofit，原理]
 author: # Add name author (optional)
 
 theory: true

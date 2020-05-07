@@ -1,10 +1,10 @@
 ---
 layout: post
 title: RxJava原理
-date:  2018-03-20 10:18:00 +0900
+date:  2018-03-13 10:18:00 +0900
 description: RxJava原理
 img: post-4.jpg # Add image post (optional)
-tags: [原理,Android]
+tags: [Android,RxJava,原理]
 author: # Add name author (optional)
 
 theory: true

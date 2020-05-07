@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Handler原理
-date:  2018-03-16 09:50:00 +0900
-description: Handler原理
-img: post-7.jpg # Add image post (optional)
-tags: [Android，Handler，原理]
+title: Android自定义view
+date:  2018-03-20 09:50:00 +0900
+description: Android自定义view
+img: post-1.jpg # Add image post (optional)
+tags: [Android，View，原理]
 author: # Add name author (optional)
 
 theory: true

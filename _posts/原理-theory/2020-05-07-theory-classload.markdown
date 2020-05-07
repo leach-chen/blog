@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Handler原理
-date:  2018-03-16 09:50:00 +0900
-description: Handler原理
-img: post-7.jpg # Add image post (optional)
-tags: [Android，Handler，原理]
+title: 类加载机制
+date:  2018-03-15 09:50:00 +0900
+description: Java类加载机制
+img: post-6.jpg # Add image post (optional)
+tags: [JAVA,ClassLoad,原理]
 author: # Add name author (optional)
 
 theory: true

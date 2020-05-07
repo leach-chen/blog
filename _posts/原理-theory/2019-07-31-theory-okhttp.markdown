@@ -1,10 +1,10 @@
 ---
 layout: post
 title: OkHttp原理
-date:  2018-03-20 14:15:00 +0900
+date:  2018-03-11 14:15:00 +0900
 description: OkHttp原理
 img: post-2.jpg # Add image post (optional)
-tags: [原理]
+tags: [Android,OkHttp,原理]
 author: # Add name author (optional)
 
 theory: true
