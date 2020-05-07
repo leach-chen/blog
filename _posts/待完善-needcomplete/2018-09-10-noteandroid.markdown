@@ -173,6 +173,42 @@ onDetach()，Fragment和Activity解除关联的时候调用。
 
 **a. measure过程**
 
+不重写onMeasure（）方法的时候默认自定义VIew是填充满父控件的，wrap_content无效。主要过程是重写onMeasure，在里面根据不同模式计算出宽高，然后调用setMeasuredDimension保存
+```
+@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
+	{
+		int width = measureDemission(DEFUALT_WIDTH,widthMeasureSpec);
+		int height = measureDemission(DEFUALT_HEIGHT,heightMeasureSpec);
+		setMeasuredDimension(width, height);
+	}
+
+	private int measureDemission(int defualtSize,int measureSpec) {
+		int result = defualtSize;
+		int mode = MeasureSpec.getMode(measureSpec);
+		int specSize = MeasureSpec.getSize(measureSpec);
+		//EXACTLY：使用母控件给出的确切的尺寸（specSize）,
+		//确定的大小一般是由控件写好的：layout_widht = "50dp",layout_height = "50dp"
+		//或者使用的fill_parent，这两种情况都可以确定大小。
+		if(mode == MeasureSpec.EXACTLY)
+		{
+			result = specSize;
+		}
+		//AT_MOST:不能超过母控件所给出的尺寸（specSize）
+		//一般用于不能确定的小的时候，如wrap_content。
+		else if(mode == MeasureSpec.AT_MOST)
+		{
+			result = Math.min(result,specSize);
+		}
+		//UNSPECIFIED:表示显示的控件大小没有指定。
+		else if(mode == MeasureSpec.UNSPECIFIED)
+		{
+			result = defualtSize;
+		}
+		return result;
+	}
+```
+
 <a href="https://blog.csdn.net/yanbober/article/details/46128379/" style="text-decoration: none;" target="\_blank"  title="">通过</a>上面分析可以看出measure过程主要就是从顶层父View向子View递归调用view.measure方法（measure中又回调onMeasure方法）的过程。具体measure核心主要有如下几点：
 
 MeasureSpec（View的内部类）测量规格为int型，值由高2位规格模式specMode和低30位具体尺寸specSize组成。其中specMode只有三种值：
@@ -447,6 +483,6 @@ public class AppSettings {
 
 **非静态内部类导致内存泄漏(广播，Retrofit+RxJava，定时器，线程)**
 
-非静态内部类会持有外部类的引用，当这个内部类的生存期比外部类还长时就会造成内存泄漏
+非静态内部类会持有外部类的引用，当这个内部类的生存期比外部类还长时就会造成内存泄漏，比如非静态内部类里面有个静态实例
 
 **集合中的对象未清理造成内存泄露、属性动画造成内存泄露、WebView造成内存泄露**
