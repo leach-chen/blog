@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 设计模式
+title: Handler
 date:  2018-03-20 09:50:00 +0900
 description: Handler机制
-img: post-3.jpg # Add image post (optional)
-tags: [原理，设计模式]
+img: post-7.jpg # Add image post (optional)
+tags: [Android，Handler]
 author: # Add name author (optional)
 
 theory: true
